@@ -14,3 +14,11 @@ path = "src/main.rs"
 [[bin]]
 name = "main1"
 path = "src/main1.rs"
+
+[[bin]]
+name = "shadow"
+path = "src/shadow.rs"
+
+[[bin]]
+name = "type_infer"
+path = "src/type_infer.rs"
