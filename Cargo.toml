@@ -26,3 +26,7 @@ path = "src/type_infer.rs"
 [[bin]]
 name = "datatype"
 path = "src/datatype.rs"
+
+[[bin]]
+name = "blockexpr"
+path = "src/blockexpr.rs"
