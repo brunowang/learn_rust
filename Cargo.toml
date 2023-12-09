@@ -30,3 +30,7 @@ path = "src/datatype.rs"
 [[bin]]
 name = "blockexpr"
 path = "src/blockexpr.rs"
+
+[[bin]]
+name = "function"
+path = "src/function.rs"

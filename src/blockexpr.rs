@@ -32,7 +32,7 @@ fn my_loop_tag() -> i32 {
         if m < 100 {
             m += 1;
         } else {
-            'b: loop {
+            loop {
                 if m + n > 50 {
                     println!("break tag a");
                     break 'a m+n;
