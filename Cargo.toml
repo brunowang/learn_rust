@@ -38,3 +38,7 @@ path = "src/function.rs"
 [[bin]]
 name = "trait"
 path = "src/trait.rs"
+
+[[bin]]
+name = "destructure"
+path = "src/destructure.rs"
