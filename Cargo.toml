@@ -42,3 +42,7 @@ path = "src/trait.rs"
 [[bin]]
 name = "destructure"
 path = "src/destructure.rs"
+
+[[bin]]
+name = "macro_rules"
+path = "src/macro_rules.rs"
