@@ -46,3 +46,7 @@ path = "src/destructure.rs"
 [[bin]]
 name = "macro_rules"
 path = "src/macro_rules.rs"
+
+[[bin]]
+name = "life_cycle"
+path = "src/life_cycle.rs"
