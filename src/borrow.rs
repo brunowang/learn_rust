@@ -13,14 +13,14 @@ fn main() {
     }
     {
         let temp = 2_i32;
-        let mut p2 = &var; // 我们不能通过p2改变变量var的值,但p2指针本身指向的位置可以被改变
-        p2 = &temp;
+        let mut _p2 = &var; // 我们不能通过p2改变变量var的值,但p2指针本身指向的位置可以被改变
+        _p2 = &temp;
     }
     {
         let mut temp = 3_i32;
-        let mut p3 = &mut var; // 我们既可以通过p3改变变量var的值,而且p3指针本身指向的位置也可以被改变
-        *p3 = 3;
-        p3 = &mut temp;
+        let mut _p3 = &mut var; // 我们既可以通过p3改变变量var的值,而且p3指针本身指向的位置也可以被改变
+        *_p3 = 3;
+        _p3 = &mut temp;
     }
 }
 
