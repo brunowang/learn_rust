@@ -50,3 +50,7 @@ path = "src/macro_rules.rs"
 [[bin]]
 name = "life_cycle"
 path = "src/life_cycle.rs"
+
+[[bin]]
+name = "borrow"
+path = "src/borrow.rs"
