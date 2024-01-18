@@ -54,3 +54,7 @@ path = "src/life_cycle.rs"
 [[bin]]
 name = "borrow"
 path = "src/borrow.rs"
+
+[[bin]]
+name = "non_lexical_lifetime"
+path = "src/non_lexical_lifetime.rs"
