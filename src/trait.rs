@@ -1,13 +1,13 @@
-use std::fmt::{Display, Formatter, Error};
+use std::fmt::{Display, Error, Formatter};
 
 fn main() {
-    let c = Circle{radius: 2f64};
+    let c = Circle { radius: 2f64 };
     println!("{:?}", c);
     println!("{:#?}", c);
     let c = Box::new(c) as Box<dyn Round>;
     println!("{}", c);
     println!("The area is {}", c.area());
-    let x : i32 = 10.double();
+    let x: i32 = 10.double();
     println!("{}", x);
     let me = Chef;
     <dyn Cook>::start(&me);
@@ -86,10 +86,16 @@ impl Wash for Chef {
 struct T(usize);
 
 impl T {
-    fn get1(&self) -> usize {self.0}
-    fn get2(&self) -> usize {self.0}
+    fn get1(&self) -> usize {
+        self.0
+    }
+    fn get2(&self) -> usize {
+        self.0
+    }
 }
 
-fn get3(t: &T) -> usize {t.0}
+fn get3(t: &T) -> usize {
+    t.0
+}
 
 fn check_type(_: fn(&T) -> usize) {}

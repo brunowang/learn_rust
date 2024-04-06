@@ -6,8 +6,7 @@ fn main() {
     process_or_default(&mut map, key);
 }
 
-fn process_or_default(map: &mut HashMap<String, String>, key: String)
-{
+fn process_or_default(map: &mut HashMap<String, String>, key: String) {
     match map.get_mut(&key) {
         Some(value) => println!("{}", value),
         None => {

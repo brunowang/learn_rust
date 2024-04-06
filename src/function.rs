@@ -3,7 +3,7 @@ fn main() {
     let func = add2;
     println!("evaluation output {}", func(p));
 
-    let func = add1 as fn((i32,i32))->i32;
+    let func = add1 as fn((i32, i32)) -> i32;
     println!("evaluation output {}", func(p));
     let mut func: fn((i32, i32)) -> i32 = add1;
     println!("evaluation output {}", func(p));
@@ -12,8 +12,8 @@ fn main() {
     // func = _add3;
     test_inner();
 
-    const DIM : usize = cube(2);
-    const ARR : [i32; DIM] = [0; DIM];
+    const DIM: usize = cube(2);
+    const ARR: [i32; DIM] = [0; DIM];
     println!("{:?}", ARR);
 
     let fib8 = fibonacci(8);
@@ -26,17 +26,20 @@ fn main() {
             Ok(val) => println!("{}: {:?}", &arg, val),
             Err(e) => println!("couldn't find environment {}, {}", &arg, e),
         }
-        println!("All environment variable count {}", std::env::vars().count());
+        println!(
+            "All environment variable count {}",
+            std::env::vars().count()
+        );
     }
 
     std::process::exit(0);
 }
 
-fn add1(t : (i32, i32)) -> i32 {
+fn add1(t: (i32, i32)) -> i32 {
     t.0 + t.1
 }
 
-fn add2((x, y) : (i32, i32)) -> i32 {
+fn add2((x, y): (i32, i32)) -> i32 {
     x + y
 }
 

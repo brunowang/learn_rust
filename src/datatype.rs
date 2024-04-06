@@ -24,10 +24,10 @@ fn main() {
         println!("{} {:?}", small, small.classify());
     }
 
-    let x = 1.0f32/0.0;
-    let y = 0.0f32/0.0;
+    let x = 1.0f32 / 0.0;
+    let y = 0.0f32 / 0.0;
     println!("{} {}", x, y);
 
     let inf = std::f32::INFINITY;
-    println!("{} {} {}", inf * 0.0, 1.0/inf, inf/inf);
+    println!("{} {} {}", inf * 0.0, 1.0 / inf, inf / inf);
 }

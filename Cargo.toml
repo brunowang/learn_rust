@@ -16,6 +16,10 @@ name = "main1"
 path = "src/main1.rs"
 
 [[bin]]
+name = "main2"
+path = "src/main2.rs"
+
+[[bin]]
 name = "shadow"
 path = "src/shadow.rs"
 
