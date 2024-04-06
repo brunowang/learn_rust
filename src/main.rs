@@ -10,15 +10,23 @@ struct User {
     name: String,
     age: u8,
     sex: Sex,
+    desc: Option<String>,
 }
 
 impl Display for User {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
-        write!(
+        if let Err(e) = write!(
             f,
             "Name: {}, Age: {}, Sex: {:?}",
-            self.name, self.age, self.sex
-        )
+            self.name, self.age, self.sex,
+        ) {
+            return Err(e);
+        }
+        if let Some(s) = &self.desc {
+            write!(f, ", Desc: {}", s)
+        } else {
+            Ok(())
+        }
     }
 }
 
@@ -27,6 +35,7 @@ fn main() {
         name: String::from("brunowang"),
         age: 30,
         sex: Sex::Male,
+        desc: Some(String::from("Administrator")),
     };
     println!("Hello, world! {}", user);
 
@@ -46,6 +55,6 @@ fn main() {
     }
     println!("{:?}", tags);
 
-    let my: (&str, u8, Sex) = ("brunowang", 30, Sex::Male);
-    println!("{:#?}, {}, {}, {:?}", my, my.0, my.1, my.2);
+    let my: (&str, u8, Sex, Option<String>) = (&user.name, user.age, user.sex, user.desc);
+    println!("{:#?}, {}, {}, {:?}, {:?}", my, my.0, my.1, my.2, my.3);
 }
