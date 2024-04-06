@@ -5,7 +5,16 @@ macro_rules! hashmap {
         map
 }} }
 
-fn main() {
-    let counts = hashmap!['A' => 0, 'C' => 0, 'G' => 0, 'T' => 0];
-    println!("{:?}", counts);
+macro_rules! echo {
+    () => (
+        println!("echo nothing");
+    );
+    ($exp: expr) => (
+        println!("echo single expression: {}", stringify!($exp));
+    );
+    ($($exp: expr), +) => (
+        $(
+            println!("echo multi expressions: {}", stringify!($exp));
+        )+
+    );
 }

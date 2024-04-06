@@ -20,6 +20,10 @@ name = "main2"
 path = "src/main2.rs"
 
 [[bin]]
+name = "main3"
+path = "src/main3.rs"
+
+[[bin]]
 name = "shadow"
 path = "src/shadow.rs"
 
@@ -46,10 +50,6 @@ path = "src/trait.rs"
 [[bin]]
 name = "destructure"
 path = "src/destructure.rs"
-
-[[bin]]
-name = "macro_rules"
-path = "src/macro_rules.rs"
 
 [[bin]]
 name = "life_cycle"
