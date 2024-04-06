@@ -1,7 +1,7 @@
+use crate::api::Stock;
 use api::Prods;
 use models::Book;
 use models::Phone;
-use crate::api::Stock;
 
 mod api;
 mod models;
@@ -17,7 +17,10 @@ fn show_prods_price_sum(b: &[&Book], p: &[&Phone]) {
     println!("The product's price sum is: {}", sum)
 }
 
-fn show_detail<T>(p: &T) where T: Prods + Stock {
+fn show_detail<T>(p: &T)
+where
+    T: Prods + Stock,
+{
     println!("book's price: {:?}", p.get_discount_price(1.0));
     println!("book's stock: {:?}", p.get_stock());
 }
@@ -31,4 +34,5 @@ fn main() {
     show_detail(&book);
     println!("{:?}, {:?}", book, book2);
     println!("{:?}, {:?}", phone, phone2);
+    println!("total origin price: {}", book + book2);
 }
