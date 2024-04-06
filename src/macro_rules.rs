@@ -18,3 +18,11 @@ macro_rules! echo {
         )+
     );
 }
+
+macro_rules! func {
+    ($name: ident) => {
+        fn $name() {
+            println!("my func name is {}", stringify!($name));
+        }
+    };
+}
