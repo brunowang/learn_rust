@@ -1,13 +1,24 @@
 use std::fmt::{Display, Formatter};
 
+#[derive(Debug)]
+enum Sex {
+    Male,
+    Female,
+}
+
 struct User {
     name: String,
     age: u8,
+    sex: Sex,
 }
 
 impl Display for User {
     fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
-        write!(f, "Name: {}, Age: {}", self.name, self.age)
+        write!(
+            f,
+            "Name: {}, Age: {}, Sex: {:?}",
+            self.name, self.age, self.sex
+        )
     }
 }
 
@@ -15,6 +26,7 @@ fn main() {
     let user: User = User {
         name: String::from("brunowang"),
         age: 30,
+        sex: Sex::Male,
     };
     println!("Hello, world! {}", user);
 
@@ -34,6 +46,6 @@ fn main() {
     }
     println!("{:?}", tags);
 
-    let my: (&str, u8) = ("brunowang", 30);
-    println!("{:#?}, {}, {}", my, my.0, my.1);
+    let my: (&str, u8, Sex) = ("brunowang", 30, Sex::Male);
+    println!("{:#?}, {}, {}, {:?}", my, my.0, my.1, my.2);
 }
