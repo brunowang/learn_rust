@@ -25,6 +25,14 @@ where
     println!("book's stock: {:?}", p.get_stock());
 }
 
+fn max<'a>(a: &'a i32, b: &'a i32) -> &'a i32 {
+    if a > b {
+        a
+    } else {
+        b
+    }
+}
+
 fn main() {
     let book: Book = Prods::new(101, 25.0);
     let book2: Book = Prods::new(102, 30.0);
@@ -35,4 +43,8 @@ fn main() {
     println!("{:?}, {:?}", book, book2);
     println!("{:?}, {:?}", phone, phone2);
     println!("total origin price: {}", book + book2);
+
+    let a: i32 = 2;
+    let b: i32 = 5;
+    println!("max: {}", max(&a, &b));
 }
